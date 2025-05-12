@@ -8,6 +8,7 @@ import { ArrowRight , Shirt } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
+import ImageUploader from "./imageUploader";
 
 
 interface customizationFormProps {
@@ -231,15 +232,15 @@ export default function CustomizationForm({ theme, styles }: customizationFormPr
                                                     type="button"
                                                     key={option}
                                                     onClick={() => field.onChange(option)}
-                                                    className={`py-2 px-3 rounded-md border transition-all ${field.value === option
+                                                    className={`py-2 px-3 rounded-md border transition-all cursor-pointer ${field.value === option
                                                         ? theme === 'purple'
-                                                            ? 'bg-purple-500 text-white border-purple-500'
+                                                            ? 'bg-purple-500 text-white border-purple-500 hover:bg-purple-600'
                                                             : theme === 'dark'
-                                                                ? 'bg-amber-500 text-slate-900 border-amber-500'
-                                                                : 'bg-blue-500 text-white border-blue-500'
+                                                                ? 'bg-amber-500 text-slate-900 border-amber-500 hover:bg-amber-600'
+                                                                : 'bg-blue-500 text-white border-blue-500 hover:bg-blue-600'
                                                         : theme === 'dark'
-                                                            ? 'bg-slate-800 text-gray-300 border-slate-700'
-                                                            : 'bg-white text-gray-700 border-gray-300'
+                                                            ? 'bg-slate-800 text-gray-300 border-slate-700 hover:bg-slate-700'
+                                                            : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-200'
                                                         }`}
                                                 >
                                                     {option.charAt(0).toUpperCase() + option.slice(1)}
@@ -253,11 +254,11 @@ export default function CustomizationForm({ theme, styles }: customizationFormPr
                     </div>
 
                     <h2 className={`text-xl font-bold mb-4 ${styles.heading}`}>Upload Design</h2>
-                    {/* <ImageUploader
-                        onImageUploaded={setUploadedImage}
+                    <ImageUploader
+                        onImageUploader={setIsUploadImage}
                         theme={theme}
                         styles={styles}
-                    /> */}
+                    />
 
                     <Button
                         type="submit"
