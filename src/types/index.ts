@@ -19,4 +19,4 @@ export type customizationFormData = {
     customText : string
 }
 
-export type buildTypes = 'thin' | 'regular' | 'normal' | 'thick'
+export type buildTypes = "lean" | "regular" | "athletic" | "big"

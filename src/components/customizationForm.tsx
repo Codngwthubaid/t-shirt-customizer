@@ -33,10 +33,10 @@ export default function CustomizationForm({ theme, styles }: customizationFormPr
 
 
     const buildOptions: buildTypes[] = [
-        "thin",
-        "regular",
-        "normal",
-        "thick"
+      "lean",
+      "regular",
+      "athletic",
+      "big"
     ]
 
     const watchHeight = watch("height")
@@ -53,7 +53,7 @@ export default function CustomizationForm({ theme, styles }: customizationFormPr
 
         // build options scale based on buildTypes
         const buildScale = {
-            thin: {
+            lean: {
                 width: 0.9,
                 height: 1.1
             },
@@ -61,11 +61,11 @@ export default function CustomizationForm({ theme, styles }: customizationFormPr
                 width: 1,
                 height: 1
             },
-            normal: {
+            athletic: {
                 width: 1.1,
                 height: 1
             },
-            thick: {
+            big: {
                 width: 1.2,
                 height: 0.8
             }
