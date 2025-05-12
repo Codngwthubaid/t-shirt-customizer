@@ -90,10 +90,13 @@ export default function CustomizationForm({ theme, styles }: customizationFormPr
     // Default Image 
     const defaultImage = DefaultImage
     const imageUrl = isUploadImage || defaultImage
-
     const onSubmit = (data: customizationFormData) => {
-        console.log(data)
-        toast.success("T-shirt customization form submitted successfully, Please check the console for the submitted data.")
+        if (!data.height || !data.weight || !data.build || (!data.imageUrl && !isUploadImage) || !data.customText) {
+            toast.error("Please fill out all fields before submitting the form.");
+            return;
+        }
+        console.log(data);
+        toast.success("T-shirt customization form submitted successfully, Please check the console for the submitted data.");
     }
 
 
