@@ -68,7 +68,7 @@ export default function TShirtCustomizer() {
                     </h1>
                     <Button
                         onClick={setThemeFunction}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-full ${styles.button} transition-all duration-300 ${styles.shadow} curpoin`}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-full ${styles.button} transition-all duration-300 ${styles.shadow} cursor-pointer`}
                         title="Alt+Q to switch theme"
                     >
                         <RefreshCw className="size-3 sm:size-5" />

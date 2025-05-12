@@ -226,13 +226,13 @@ export default function CustomizationForm({ theme, styles }: customizationFormPr
                                     control={control}
                                     name="build"
                                     render={({ field }) => (
-                                        <div className="grid grid-cols-4 gap-2">
+                                        <div className="flex gap-2 flex-wrap justify-center items-center w-full">
                                             {buildOptions.map((option) => (
                                                 <Button
                                                     type="button"
                                                     key={option}
                                                     onClick={() => field.onChange(option)}
-                                                    className={`py-2 px-3 rounded-md border transition-all cursor-pointer ${field.value === option
+                                                    className={`py-2 px-3 sm:w-1/5 rounded-md border transition-all cursor-pointer ${field.value === option
                                                         ? theme === 'purple'
                                                             ? 'bg-purple-500 text-white border-purple-500 hover:bg-purple-600'
                                                             : theme === 'dark'
