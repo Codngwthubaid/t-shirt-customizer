@@ -1,1 +1,0 @@
-export type themeTypes = 'dark' | 'light' | 'purple'

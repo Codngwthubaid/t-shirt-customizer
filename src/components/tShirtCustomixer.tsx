@@ -2,6 +2,7 @@ import { useTheme } from "../context/themeProvider"
 import { RefreshCw } from "lucide-react"
 import type { themeTypes } from "../types";
 import { Button } from "./ui/button";
+import CustomizationForm from "./customizationForm";
 
 export default function TShirtCustomizer() {
 
@@ -67,7 +68,7 @@ export default function TShirtCustomizer() {
                     </h1>
                     <Button
                         onClick={setThemeFunction}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-full ${styles.button} transition-all duration-300 ${styles.shadow}`}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-full ${styles.button} transition-all duration-300 ${styles.shadow} cursor-pointer`}
                         title="Alt+Q to switch theme"
                     >
                         <RefreshCw className="size-3 sm:size-5" />
@@ -76,7 +77,7 @@ export default function TShirtCustomizer() {
                 </div>
 
                 <div className={`${styles.formBg} rounded-lg ${styles.border} border ${styles.shadow} transition-all duration-500`}>
-                    {/* <CustomizationForm theme={theme} styles={styles} /> */}
+                    <CustomizationForm theme={theme} styles={styles} />
                 </div>
 
                 <div className="mt-6 text-center text-sm opacity-70">

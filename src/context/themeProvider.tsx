@@ -1,5 +1,6 @@
 import React, { useContext, createContext, useState, useEffect } from "react"
 import type { themeTypes } from "../types"
+import { Toaster } from "sonner"
 
 interface ThemeProviderProps {
     theme: themeTypes,
@@ -11,7 +12,7 @@ const themeContext = createContext<ThemeProviderProps | undefined>(undefined)
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
 
-    const [isTheme, setIsTheme] = useState<themeTypes>("light")
+    const [isTheme, setIsTheme] = useState<themeTypes>("dark")
 
 
     const setThemeFunction = () => {
@@ -37,6 +38,7 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
     return (
      <themeContext.Provider value={{ theme: isTheme, setThemeFunction }}>
         {children}
+        <Toaster />
      </themeContext.Provider>
     )
 }
