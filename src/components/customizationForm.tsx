@@ -23,9 +23,9 @@ export default function CustomizationForm({ theme, styles }: customizationFormPr
 
     const { register, watch, control, handleSubmit, formState: { errors } } = useForm<customizationFormData>({
         defaultValues: {
-            height: 120,
-            weight: 90,
-            build: "regular",
+            height: 180,
+            weight: 80,
+            build: "athletic",
             imageUrl: null,
             customText: ""
         }

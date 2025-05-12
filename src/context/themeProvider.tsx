@@ -12,7 +12,7 @@ const themeContext = createContext<ThemeProviderProps | undefined>(undefined)
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
 
-    const [isTheme, setIsTheme] = useState<themeTypes>("dark")
+    const [isTheme, setIsTheme] = useState<themeTypes>("purple")
 
 
     const setThemeFunction = () => {
