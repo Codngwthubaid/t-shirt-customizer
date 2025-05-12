@@ -1,6 +1,6 @@
 import React, { useContext, createContext, useState, useEffect } from "react"
 import type { themeTypes } from "../types"
-import { Toaster } from "sonner"
+import { Toaster } from "@/components/ui/sonner"
 
 interface ThemeProviderProps {
     theme: themeTypes,
